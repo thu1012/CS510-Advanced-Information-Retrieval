@@ -34,7 +34,7 @@ You are expected to submit:
 - Related code files, e.g., inference code, post-process, and any code if you create or modify.
 - The generated code for reproducing your reported results
 
-**Due: TBD.**
+**Due: May 1st. **
 
 *This assignment is designed based on [CodeScope](https://github.com/WeixiangYAN/CodeScope.git)*
 

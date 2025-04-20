@@ -12,9 +12,15 @@ from google.api_core.exceptions import GoogleAPIError
 def parse_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--api_key', required=True, type=str)
-    parser.add_argument('--model', default='gemini-2.0-flash', choices=['gemini-2.0-flash'], type=str)
+    # parser.add_argument('--model', default='gemini-2.0-flash', choices=['gemini-2.0-flash'], type=str)
+    parser.add_argument('--model', default='gemini-2.0-flash',
+    choices=[
+        'gemini-2.0-flash-lite',
+        'gemini-2.0-flash'],
+    type=str
+)
     parser.add_argument('--data_load_name', default='program_synthesis_data.jsonl', type=str)
-    parser.add_argument('--result_save_name', default='program_synthesis_eval_gemini.jsonl', type=str)
+    parser.add_argument('--result_save_name', default='program_synthesis_run_gemini.jsonl', type=str)
     parser.add_argument('--log_file_name', default='program_synthesis_eval_gemini.logs', type=str)
     parser.add_argument('--temperature', default=0.5, type=float)
     parser.add_argument('--candidate_num', default=2, type=int)
